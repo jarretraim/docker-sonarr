@@ -1,5 +1,2 @@
 #!/bin/sh
-# `/sbin/setuser memcache` runs the given command as the user `memcache`.
-# If you omit that part, the command will be run as root.
-# exec /sbin/setuser memcache /usr/bin/memcached >>/var/log/memcached.log 2>&1
-exec /sbin/setuser sonarr mono --debug /opt/NzbDrone/NzbDrone.exe
+exec /sbin/setuser nobody mono /opt/NzbDrone/NzbDrone.exe -data=/volumes/config/sonarr
